@@ -45,8 +45,54 @@
         </div>
     </nav>
 
+    <!--Introdução-->
+    <section class="w-75 m-auto align-items-center text-center bg-danger text-white mt-2">
+        <div class="container">
+            <h2 class="display-4">Conheça Nossas Acomodações</h2>
+        </div>
+        <div class="row container">
+            <p class="lead col-12 col-sm-7 offset-sm-1">Descubra o quarto perfeito para a sua estadia, são várias opções que atendem todas as suas necessidades e preferências.</p>
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade img-fluid col-12 col-sm-4 mb-3">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./imagens/Domo.jpeg" class="d-block w-100" alt="domo">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/Cabana.jpg" class="d-block w-100" alt="cabana">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/Chalá Família.jpg" class="d-block w-100" alt="chalé">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/Charrua.jpeg" class="d-block w-100" alt="charrua">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/Suíte com cozinha.jpg" class="d-block w-100" alt="suiteComCozinha">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/Overlanders.jpg" class="d-block w-100" alt="overlander">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </section>
     <!-- Card Acomodação -->
-  
     <div class="container my-5">
         <div class="row align-items-start mb-4">
             <!-- Imagem -->
@@ -61,11 +107,78 @@
                 </p>
                 <p class="text-primary text-center text-md-start"><strong>R$ 590/noite</strong></p>
                 <div class="d-flex justify-content-center justify-content-md-start">
-                    <a href="#" class="btn btn-primary">Mais Informações</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDomo">Mais Informações</button>
+                <!--Modal Domo-->
+                    <div class="modal fade" id="modalDomo" aria-labelledby="modalDomo" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="modalDomo">Detalhes do Domo</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                               <!--Carrossel de imagens-->
+                               <div id="carouselDomoIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselDomoIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselDomoIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselDomoIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="./imagens/Domo.jpeg" class="d-block w-100" alt="domo">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./imagens/Chalá Família.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./imagens/Charrua.jpeg" class="d-block w-100" alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDomoIndicators" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselDomoIndicators" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                              <!--Demais informações--> 
+                              <p><strong>Informações Adicionais:</strong></p>
+                              <p>Os valores exibidos no site estão sujeitos a constantes atualizações. Nos feriados e datas comemorativas o valor da diária também é diferenciado. Para mais detalhes entre em contato por telefone.</p>
+                              <p>O Domo é a grande novidade da pousada. Uma acomodação totalmente diferenciada construída nos padrões arquitetônicos dos domos geodésicos modernos.</p>
+                              <p><strong>Comodidades:</strong></p>
+                              <ul>
+                                  <li>Cama Casal</li>
+                                  <li>Ar-condicionado</li>
+                                  <li>Wi-Fi Grátis</li>
+                                  <li>Frigo-bar</li>
+                                  <li>TV</li>
+                                  <li>Ducha</li>
+                                  <li>Cozinha</li>
+                                  <li>Toalhas</li>
+                              </ul>
+                      
+                              <p><strong>Capacidade:</strong> Até 3 pessoas</p>
+                              <div class="container row text-start">
+                              <p class="col-6 col-md-3 p-0"><strong>Checkin:</strong> 14:00</p>
+                              <p class="col-6 col-md-3"><strong>Checkout:</strong> 10:00</p>
+                              </div>
+                              <p><strong>Preço:</strong> R$ 590/noite</p>
+                              <p><strong>Condições:</strong> Reserva a partir de no mínimo de 2 noites</p>
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                              <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Fazer Reserva</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
             </div>
         </div>
-
+        
         <hr class="my-5">
 
         <div class="row align-items-start mb-4">
@@ -81,7 +194,73 @@
                 </p>
                 <p class="text-primary text-center text-md-start"><strong>R$ 490/noite</strong></p>
                 <div class="d-flex justify-content-center justify-content-md-start">
-                <a href="#" class="btn btn-primary">Mais Informações</a>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCabana">Mais Informações</button>
+                <!--Modal Cabana-->
+                <div class="modal fade" id="modalCabana" aria-labelledby="modalCabana" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">    
+                          <h5 class="modal-title" id="modalCabana">Detalhes da Cabana</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--Carrossel de imagens-->
+                            <div id="carouselCabanaIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselCabanaIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselCabanaIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselCabanaIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="./imagens/Domo.jpeg" class="d-block w-100" alt="domo">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./imagens/Chalá Família.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./imagens/Charrua.jpeg" class="d-block w-100" alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCabanaIndicators" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselCabanaIndicators" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                              <!--Demais informações--> 
+                          <p><strong>Informações Adicionais:</strong></p>
+                          <p>Os valores exibidos no site estão sujeitos a constantes atualizações. Nos feriados e datas comemorativas o valor da diária também é diferenciado. Para mais detalhes entre em contato por telefone.</p>
+                          <p>Esta acomodação está localizada em uma área mais reservada da pousada. Possui cama de casal, uma cama de solteiro, cama extra, ar-condicionado, TV, cozinha com utensílios básicos e banheiro. Na área externa possui varanda e deck com churrasqueira, tendo ampla vista para o mar. A acomodação é ideal para três pessoas, podendo comportar até quatro.</p>
+                          <p><strong>Comodidades:</strong></p>
+                          <ul>
+                              <li>Cama Casal</li>
+                              <li>Cama Solteiro</li>
+                              <li>Ar-condicionado</li>
+                              <li>Wi-Fi Grátis</li>
+                              <li>TV</li>
+                              <li>Cozinha</li>
+                              <li>Toalhas</li>
+                          </ul>
+                  
+                          <p><strong>Capacidade:</strong> Até 3 pessoas</p>
+                          <div class="container row text-start">
+                          <p class="col-6 col-md-3 p-0"><strong>Checkin:</strong> 14:00</p>
+                          <p class="col-6 col-md-3"><strong>Checkout:</strong> 10:00</p>
+                          </div>
+                          <p><strong>Preço:</strong> R$ 490/noite</p>
+                          <p><strong>Condições:</strong> Reserva a partir de no mínimo de 2 noites</p>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                          <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Fazer Reserva</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
