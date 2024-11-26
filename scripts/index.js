@@ -15,3 +15,6 @@ logoutButton.addEventListener('click', (event) => {
     dropdownMenuLink.classList.add('d-none'); // Esconde botão de logout
     loginButton.classList.remove('d-none'); // Mostra botão de login
 });
+
+
+  
