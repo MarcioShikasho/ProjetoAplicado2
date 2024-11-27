@@ -23,7 +23,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav d-flex justify-content-between">
-        <a class="nav-item nav-link text-center me-4" href="#">Sobre nós</a>
+        <a class="nav-item nav-link text-center me-4" href="./sobre.html">Sobre nós</a>
         <a class="nav-item nav-link text-center me-4" href="./acomodacoes.html">Acomodações</a>
         <a class="nav-item nav-link text-center me-4" href="#">Contatos</a>
         <a class="nav-item nav-link text-center me-4" href="./acomodacoes.html">Faça sua Reserva</a>
@@ -105,31 +105,16 @@
             aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
             aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-            aria-label="Slide 5"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-            aria-label="Slide 6"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./imagens/Domo.jpeg" class="d-block w-100" alt="domo">
+            <img src="./imagens/Domo/Domo.jpeg" class="d-block w-100" alt="domo">
           </div>
           <div class="carousel-item">
-            <img src="./imagens/Cabana.jpg" class="d-block w-100" alt="cabana">
+            <img src="./imagens/Cabana/Cabana.jpg" class="d-block w-100" alt="cabana">
           </div>
           <div class="carousel-item">
-            <img src="./imagens/Chalá Família.jpg" class="d-block w-100" alt="chalé">
-          </div>
-          <div class="carousel-item">
-            <img src="./imagens/Charrua.jpeg" class="d-block w-100" alt="charrua">
-          </div>
-          <div class="carousel-item">
-            <img src="./imagens/Suíte com cozinha.jpg" class="d-block w-100" alt="suiteComCozinha">
-          </div>
-          <div class="carousel-item">
-            <img src="./imagens/Overlanders.jpg" class="d-block w-100" alt="overlander">
+            <img src="./imagens/Suíte com cozinha/Suíte com cozinha.jpg" class="d-block w-100" alt="suíte com cozinha">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -151,7 +136,7 @@
     <div class="row align-items-start mb-4">
       <!-- Imagem -->
       <div class="col-12 col-md-4 text-center">
-        <img src="./imagens/Domo.jpeg" class="img-fluid rounded" alt="Acomodação Luxo" style="max-width: 300px;">
+        <img src="./imagens/Domo/Domo.jpeg" class="img-fluid rounded" alt="Domo" style="max-width: 300px;">
       </div>
       <!-- Descrição -->
       <div class="col-12 col-md-8 gx-5 gx-lg-0">
@@ -191,16 +176,16 @@
                         <img src="./imagens/Domo/domo_1.jpeg" class="d-block w-100" alt="domo_1">
                       </div>
                       <div class="carousel-item">
-                        <img src="./imagens/Domo/domo_2.jpeg" class="d-block w-100" alt="domo_2">
+                        <img src="./imagens/Domo/domo_2.png" class="d-block w-100" alt="domo_2">
                       </div>
                       <div class="carousel-item">
-                        <img src="./imagens/Domo/domo_3.jpeg" class="d-block w-100" alt="domo_3">
+                        <img src="./imagens/Domo/domo_3.png" class="d-block w-100" alt="domo_3">
                       </div>
                       <div class="carousel-item">
-                        <img src="./imagens/Domo/domo_4.jpeg" class="d-block w-100" alt="domo_4">
+                        <img src="./imagens/Domo/domo_4.png" class="d-block w-100" alt="domo_4">
                       </div>
                       <div class="carousel-item">
-                        <img src="./imagens/Domo/domo_5.jpeg" class="d-block w-100" alt="domo_5">
+                        <img src="./imagens/Domo/domo_5.png" class="d-block w-100" alt="domo_5">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselDomoIndicators"
@@ -253,7 +238,7 @@
       </div>
     </div>
     <!-- Modal de Reserva Domo-->
-    <div class="modal fade" id="modalReservaDomo" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
+    <div class="modalAcomod modal fade" id="modalReservaDomo" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
@@ -300,11 +285,11 @@
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <label for="dataCheckin" class="form-label">Data de Check-in</label>
-                      <input type="date" class="form-control" id="dataCheckin">
+                      <input type="date" class="form-control dataCheckin" id="dataCheckin">
                     </div>
                     <div class="col-md-6 mb-3">
                       <label for="dataCheckout" class="form-label">Data de Check-out</label>
-                      <input type="date" class="form-control" id="dataCheckout">
+                      <input type="date" class="form-control dataCheckout" id="dataCheckout">
                     </div>
                   </div>
                   <div class="mb-3">
@@ -328,7 +313,7 @@
     <div class="row align-items-start mb-4">
       <!-- Imagem -->
       <div class="col-12 col-md-4 text-center">
-        <img src="./imagens/Cabana.jpg" class="img-fluid rounded" alt="Acomodação Luxo" style="max-width: 300px;">
+        <img src="./imagens/Cabana/Cabana.jpg" class="img-fluid rounded" alt="Cabana" style="max-width: 300px;">
       </div class>
       <!-- Descrição -->
       <div class="col-12 col-md-8 gx-5 gx-lg-0">
@@ -364,13 +349,19 @@
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="./imagens/Cabana.jpg" class="d-block w-100" alt="cabana">
+                        <img src="./imagens/Cabana/Cabana.jpg" class="d-block w-100" alt="cabana">
                       </div>
                       <div class="carousel-item">
-                        <img src="./imagens/Cabana/cabana_1.jpg" class="d-block w-100" alt="ducha">
+                        <img src="./imagens/Cabana/cabana_1.png" class="d-block w-100" alt="cabana_1">
                       </div>
                       <div class="carousel-item">
-                        <img src="./imagens/Charrua.jpeg" class="d-block w-100" alt="...">
+                        <img src="./imagens/Cabana/cabana_2.png" class="d-block w-100" alt="cabana_2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./imagens/Cabana/cabana_3.png" class="d-block w-100" alt="cabana_3">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./imagens/Cabana/cabana_4.jpg" class="d-block w-100" alt="cabana_4">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselCabanaIndicators"
@@ -422,82 +413,83 @@
         </div>
       </div>
     </div>
- <!-- Modal de Reserva Cabana-->
- <div class="modal fade" id="modalReservaCabana" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalReservaLabel">Detalhes da Reserva</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <!-- Card com Detalhes da Acomodação -->
-          <div class="col-md-4">
-            <div class="card mb-4">
-              <img src="./imagens/Cabana.jpg" class="card-img-top" alt="Imagem da Acomodação">
-              <div class="card-body">
-                <h5 class="card-title">Cabana</h5>
-                <p class="card-text text-primary"><strong>R$ 490/noite</strong></p>
-                <ul class="list-unstyled">
-                  <li>Cama Casal</li>
-                  <li>Cama Solteiro</li>
-                  <li>Ar-condicionado</li>
-                  <li>Wi-Fi Grátis</li>
-                  <li>TV</li>
-                  <li>Cozinha</li>
-                  <li>Toalhas</li>
-                </ul>
+    <!-- Modal de Reserva Cabana-->
+    <div class="modalAcomod modal fade" id="modalReservaCabana" tabindex="-1" aria-labelledby="modalReservaLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalReservaLabel">Detalhes da Reserva</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <!-- Card com Detalhes da Acomodação -->
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img src="./imagens/Cabana/Cabana.jpg" class="card-img-top" alt="Imagem da Acomodação">
+                  <div class="card-body">
+                    <h5 class="card-title">Cabana</h5>
+                    <p class="card-text text-primary"><strong>R$ 490/noite</strong></p>
+                    <ul class="list-unstyled">
+                      <li>Cama Casal</li>
+                      <li>Cama Solteiro</li>
+                      <li>Ar-condicionado</li>
+                      <li>Wi-Fi Grátis</li>
+                      <li>TV</li>
+                      <li>Cozinha</li>
+                      <li>Toalhas</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Formulário de reserva -->
+              <div class="col-md-8">
+                <form>
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone">
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="dataCheckin" class="form-label">Data de Check-in</label>
+                      <input type="date" class="form-control dataCheckin" id="dataCheckin">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="dataCheckout" class="form-label">Data de Check-out</label>
+                      <input type="date" class="form-control dataCheckout" id="dataCheckout">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="comentarios" class="form-label">Comentários (opcional)</label>
+                    <textarea class="form-control" id="comentarios" rows="3"
+                      placeholder="Digite qualquer comentário adicional"></textarea>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <!-- Formulário de reserva -->
-          <div class="col-md-8">
-            <form>
-              <div class="mb-3">
-                <label for="nome" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
-              </div>
-              <div class="mb-3">
-                <label for="telefone" class="form-label">Telefone</label>
-                <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone">
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="dataCheckin" class="form-label">Data de Check-in</label>
-                  <input type="date" class="form-control" id="dataCheckin">
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="dataCheckout" class="form-label">Data de Check-out</label>
-                  <input type="date" class="form-control" id="dataCheckout">
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="comentarios" class="form-label">Comentários (opcional)</label>
-                <textarea class="form-control" id="comentarios" rows="3"
-                  placeholder="Digite qualquer comentário adicional"></textarea>
-              </div>
-            </form>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Confirmar Reserva</button>
           </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Confirmar Reserva</button>
-      </div>
     </div>
-  </div>
-</div>
     <hr class="my-5">
     <!--Suíte com Cozinha-->
     <div class="row align-items-start mb-4">
       <!-- Imagem -->
       <div class="col-12 col-md-4 text-center ">
-        <img src="./imagens/Suíte com cozinha.jpg" class="img-fluid rounded" alt="Acomodação Luxo"
+        <img src="./imagens/Suíte com cozinha/Suíte com cozinha.jpg" class="img-fluid rounded" alt="Suíte"
           style="max-width: 300px;">
       </div>
       <!-- Descrição -->
@@ -535,13 +527,19 @@
                   </div>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="./imagens/Suíte com cozinha.jpg" class="d-block w-100" alt="varanda">
+                      <img src="./imagens/Suíte com cozinha/suite_5.png" class="d-block w-100" alt="suite">
                     </div>
                     <div class="carousel-item">
-                      <img src="./imagens/Suíte com cozinha/Suite_1.jpg" class="d-block w-100" alt="entrada">
+                      <img src="./imagens/Suíte com cozinha/Suite_1.jpg" class="d-block w-100" alt="suite_1">
                     </div>
                     <div class="carousel-item">
-                      <img src="./imagens/Charrua.jpeg" class="d-block w-100" alt="...">
+                      <img src="./imagens/Suíte com cozinha/suite_2.png" class="d-block w-100" alt="suite_2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./imagens/Suíte com cozinha/suite_3.png" class="d-block w-100" alt="suite_3">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./imagens/Suíte com cozinha/suite_4.png" class="d-block w-100" alt="suite_4">
                     </div>
                   </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselSuiteIndicators"
@@ -593,76 +591,77 @@
       </div>
     </div>
   </div>
- <!-- Modal de Reserva -->
- <div class="modal fade" id="modalReservaSuite" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalReservaLabel">Detalhes da Reserva</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <!-- Card com Detalhes da Acomodação -->
-          <div class="col-md-4">
-            <div class="card mb-4">
-              <img src="./imagens/Suíte com cozinha.jpg" class="card-img-top" alt="Imagem da Acomodação">
-              <div class="card-body">
-                <h5 class="card-title">Suíte com Cozinha</h5>
-                <p class="card-text text-primary"><strong>R$ 390/noite</strong></p>
-                <ul class="list-unstyled">
-                  <li>Cama Casal</li>
-                  <li>Cama Solteiro</li>
-                  <li>Ar-condicionado</li>
-                  <li>Wi-Fi Grátis</li>
-                  <li>TV</li>
-                  <li>Cozinha</li>
-                  <li>Toalhas</li>
-                </ul>
+  <!-- Modal de Reserva -->
+  <div class="modalAcomod modal fade" id="modalReservaSuite" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalReservaLabel">Detalhes da Reserva</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- Card com Detalhes da Acomodação -->
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img src="./imagens/Suíte com cozinha/Suíte com cozinha.jpg" class="card-img-top" alt="Imagem da Acomodação">
+                <div class="card-body">
+                  <h5 class="card-title">Suíte com Cozinha</h5>
+                  <p class="card-text text-primary"><strong>R$ 390/noite</strong></p>
+                  <ul class="list-unstyled">
+                    <li>Cama Casal</li>
+                    <li>Cama Solteiro</li>
+                    <li>Ar-condicionado</li>
+                    <li>Wi-Fi Grátis</li>
+                    <li>TV</li>
+                    <li>Cozinha</li>
+                    <li>Toalhas</li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Formulário de reserva -->
-          <div class="col-md-8">
-            <form>
-              <div class="mb-3">
-                <label for="nome" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
-              </div>
-              <div class="mb-3">
-                <label for="telefone" class="form-label">Telefone</label>
-                <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone">
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="dataCheckin" class="form-label">Data de Check-in</label>
-                  <input type="date" class="form-control" id="dataCheckin">
+            <!-- Formulário de reserva -->
+            <div class="col-md-8">
+              <form>
+                <div class="mb-3">
+                  <label for="nome" class="form-label">Nome Completo</label>
+                  <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
                 </div>
-                <div class="col-md-6 mb-3">
-                  <label for="dataCheckout" class="form-label">Data de Check-out</label>
-                  <input type="date" class="form-control" id="dataCheckout">
+                <div class="mb-3">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
                 </div>
-              </div>
-              <div class="mb-3">
-                <label for="comentarios" class="form-label">Comentários (opcional)</label>
-                <textarea class="form-control" id="comentarios" rows="3"
-                  placeholder="Digite qualquer comentário adicional"></textarea>
-              </div>
-            </form>
+                <div class="mb-3">
+                  <label for="telefone" class="form-label">Telefone</label>
+                  <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone">
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="dataCheckin" class="form-label">Data de Check-in</label>
+                    <input type="date" class="form-control dataCheckin" id="dataCheckin">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="dataCheckout" class="form-label">Data de Check-out</label>
+                    <input type="date" class="form-control dataCheckout" id="dataCheckout">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="comentarios" class="form-label">Comentários (opcional)</label>
+                  <textarea class="form-control" id="comentarios" rows="3"
+                    placeholder="Digite qualquer comentário adicional"></textarea>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Confirmar Reserva</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Confirmar Reserva</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <hr class="m-0">
   <!-- Footer -->
   <footer class="bg-light text-center text-lg-start mt-2">
     <div class="container p-4">
@@ -684,10 +683,10 @@
         <div class="col-12 col-lg-2 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase">Navegação</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-dark text-decoration-none">Sobre nós</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Acomodações</a></li>
+            <li><a href="./sobre.html" class="text-dark text-decoration-none">Sobre nós</a></li>
+            <li><a href="./acomodacoes.html" class="text-dark text-decoration-none">Acomodações</a></li>
             <li><a href="#" class="text-dark text-decoration-none">Contatos</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Faça sua Reserva</a></li>
+            <li><a href="./acomodacoes.html" class="text-dark text-decoration-none">Faça sua Reserva</a></li>
           </ul>
         </div>
 
