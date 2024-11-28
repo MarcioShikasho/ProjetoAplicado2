@@ -1,5 +1,5 @@
 // Função para definir a data para a data atual e não permitir agendamentos em datas passadas
-function setMinDate(modal) {
+function definirDataMin(modal) {
     const hoje = new Date();
 
     // Formata a data como YYYY-MM-DD
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Para cada modal, adiciona o evento 'shown.bs.modal'
     modais.forEach(function (modal) {
         modal.addEventListener('shown.bs.modal', function () {
-            setMinDate(modal);
+            definirDataMin(modal);
         });
 
         // Troca a data do Checkout toda vez que o Checkin for alterado
