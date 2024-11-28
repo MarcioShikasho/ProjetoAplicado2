@@ -6,4 +6,4 @@
 
 # Linguagens: HTML, CSS (BootStrap), JavaScript 
 
-# Desenvolvimento: Para a criação das páginas Webs foi escolhido a utilização do HTML em conjunto do BootStrap, que é um framework do CSS que já fornece modelos prontos com algumas funcionalidades. Com isso é possível um desenvolvimento mais ágil das páginas, bem como facilita a questão de responsavidade. 
+# Desenvolvimento: Para a criação das páginas Webs foi escolhido a utilização do HTML em conjunto do BootStrap, que é um framework do CSS que já fornece modelos prontos com algumas funcionalidades. Com isso é possível um desenvolvimento mais ágil das páginas, bem como facilita a questão de responsividade. 
