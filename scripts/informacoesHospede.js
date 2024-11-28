@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Alerta de alteração, desabilita os campos e troca do botão salvar para editar
     document.getElementById('confirmEdit').addEventListener('click', function () {
-        alert('Informações editadas com sucesso!');
 
         inputs.forEach(input => input.disabled = true);
 

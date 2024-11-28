@@ -1,27 +1,25 @@
-// Variável para guardar o card da reserva a ser cancelado
-let reservaParaCancelar = null;
+document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona todos os botões de cancelar
+    const cancelButtons = document.querySelectorAll('.btn-danger');
+    const confirmButton = document.getElementById('confirmCancel');
+    let currentReservaId = null; // Para rastrear qual reserva será cancelada
 
-// Adicionar evento de clique para os botões de Cancelar Reserva
-document.querySelectorAll('.btn-danger').forEach(button => {
-    button.addEventListener('click', function () {
-        // Guardar o card da reserva que será cancelada
-        reservaParaCancelar = button.closest('.card');
-
-        // Mostrar o modal de confirmação
-        const cancelModal = new bootstrap.Modal(document.getElementById('cancelModal'));
-        cancelModal.show();
+    // Adiciona evento para abrir o modal de confirmação
+    cancelButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            currentReservaId = event.target.closest('.col-12').id; // Obtém o ID da reserva
+            const cancelModal = new bootstrap.Modal(document.getElementById('cancelModal'));
+            cancelModal.show();
+        });
     });
-});
 
-// Adicionar evento de clique ao botão de confirmação no modal
-document.getElementById('confirmCancel').addEventListener('click', function () {
-    // Se houver uma reserva para cancelar
-    if (reservaParaCancelar) {
-        // Remover o card da reserva
-        reservaParaCancelar.remove();
-
-        // Fechar o modal após a confirmação
-        const cancelModal = new bootstrap.Modal(document.getElementById('cancelModal'));
-        cancelModal.hide();
-    }
+    // Confirma o cancelamento
+    confirmButton.addEventListener('click', () => {
+        if (currentReservaId) {
+            const reservaElement = document.getElementById(currentReservaId);
+            if (reservaElement) {
+                reservaElement.classList.add('d-none'); 
+            }
+        }
+    });
 });

@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="d-none d-lg-block" style="width: 200px;"></div>
@@ -93,23 +93,23 @@
     </div>
     <hr class="m-0">
     <!--Reservas-->
-    <div class="container mt-5">
-        <h2>Minhas Reservas</h2>
+    <div class="container mt-5 mb-3 flex-grow-1 align-content-center">
+        <h2 class="mb-4 text-center">Minhas Reservas</h2>
     
         <!-- Grid para exibir as reservas -->
         <div class="row justify-content-center">
             <div class="col-12 col-md-5 col-lg-4 mb-3" id="reserva1">
                 <div class="card">
                     <div class="card-header">
-                        Reserva: <strong>Apartamento Luxo</strong>
+                        Reserva: <strong>Domo</strong>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Detalhes da Reserva</h5>
-                        <p><strong>Valor:</strong> R$ 1.500,00</p>
-                        <p><strong>Check-in:</strong> 2024-12-10</p>
-                        <p><strong>Check-out:</strong> 2024-12-12</p>
-                        <p><strong>Nome:</strong> João Silva</p>
-                        <p><strong>E-mail:</strong> joao@email.com</p>
+                        <p><strong>Valor:</strong> R$ 1.180,00</p>
+                        <p><strong>Check-in:</strong> 10-12-2024</p>
+                        <p><strong>Check-out:</strong> 12-12-2024</p>
+                        <p><strong>Nome:</strong> Tester</p>
+                        <p><strong>E-mail:</strong> teste@email.com</p>
                         <p><strong>Telefone:</strong> (11) 99999-9999</p>
                         <p><strong>CPF:</strong> 123.456.789-00</p>
                         <button class="btn btn-danger" id="cancelButton1">Cancelar Reserva</button>
@@ -120,17 +120,17 @@
             <div class="col-12 col-md-5 col-lg-4 mb-3" id="reserva2">
                 <div class="card">
                     <div class="card-header">
-                        Reserva: <strong>Quarto Standard</strong>
+                        Reserva: <strong>Cabana</strong>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Detalhes da Reserva</h5>
-                        <p><strong>Valor:</strong> R$ 800,00</p>
-                        <p><strong>Check-in:</strong> 2024-12-15</p>
-                        <p><strong>Check-out:</strong> 2024-12-18</p>
-                        <p><strong>Nome:</strong> Maria Oliveira</p>
-                        <p><strong>E-mail:</strong> maria@email.com</p>
-                        <p><strong>Telefone:</strong> (11) 98888-8888</p>
-                        <p><strong>CPF:</strong> 987.654.321-00</p>
+                        <p><strong>Valor:</strong> R$ 980,00</p>
+                        <p><strong>Check-in:</strong> 15-12-2024</p>
+                        <p><strong>Check-out:</strong> 17-12-2024</p>
+                        <p><strong>Nome:</strong> Tester</p>
+                        <p><strong>E-mail:</strong> teste@email.com</p>
+                        <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                        <p><strong>CPF:</strong> 123.456.789-00</p>
                         <button class="btn btn-danger" id="cancelButton2">Cancelar Reserva</button>
                     </div>
                 </div>
@@ -139,17 +139,17 @@
             <div class="col-12 col-md-5 col-lg-4 mb-3" id="reserva3">
                 <div class="card">
                     <div class="card-header">
-                        Reserva: <strong>Suíte Master</strong>
+                        Reserva: <strong>Suíte com cozinha</strong>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Detalhes da Reserva</h5>
-                        <p><strong>Valor:</strong> R$ 2.000,00</p>
-                        <p><strong>Check-in:</strong> 2024-12-20</p>
-                        <p><strong>Check-out:</strong> 2024-12-25</p>
-                        <p><strong>Nome:</strong> Carlos Souza</p>
-                        <p><strong>E-mail:</strong> carlos@email.com</p>
-                        <p><strong>Telefone:</strong> (11) 97777-7777</p>
-                        <p><strong>CPF:</strong> 222.333.444-55</p>
+                        <p><strong>Valor:</strong> R$ 780,00</p>
+                        <p><strong>Check-in:</strong> 20-12-2024</p>
+                        <p><strong>Check-out:</strong> 22-12-2024</p>
+                        <p><strong>Nome:</strong> Tester</p>
+                        <p><strong>E-mail:</strong> teste@email.com</p>
+                        <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                        <p><strong>CPF:</strong> 123.456.789-00</p>
                         <button class="btn btn-danger" id="cancelButton3">Cancelar Reserva</button>
                     </div>
                 </div>
@@ -175,9 +175,9 @@
             </div>
         </div>
     </div>
-    
+</div>
     <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start py-4">
+    <footer class="bg-light text-center text-lg-start py-4 align-items-end">
         <div class="container p-4">
             <div class="row justify-content-center">
 
@@ -234,6 +234,7 @@
             ©PousadaQuintaDoYpua Todos os Direitos Reservados 2024
         </div>
     </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
