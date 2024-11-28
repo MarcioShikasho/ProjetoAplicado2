@@ -28,7 +28,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         localStorage.setItem('isLoggedIn', 'true');
 
         // Redireciona para a página de acomodações
-        window.location.href = "./acomodacoes.html";
+        window.location.href = "./telaAcomodacoes.html";
     } else {
         alert("Por favor, preencha os campos de login.");
     }

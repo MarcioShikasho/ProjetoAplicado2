@@ -21,7 +21,7 @@ function login(event) {
 
     // Atualiza a navbar e redireciona para a página de acomodações
     updateNavbar();
-    window.location.href = './acomodacoes.html'; // Redireciona para a página de acomodações
+    window.location.href = './telaAcomodacoes.html'; // Redireciona para a página de acomodações
 }
 
 function logout() {

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pousada Quinta do Ypuã - Cadastro Login</title>
+  <title>Pousada Quinta do Ypuã - Sobre nós</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -88,107 +88,96 @@
       </div>
     </div>
   </div>
-  <!-- Modal Login-->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Faça seu cadastro</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="form">
-            <form class="row g-3 w-100 m-auto my-5">
-              <fieldset class="border bg-light p3 d-grid m-auto rounded-3">
-                <div class="col-12 col-md-12 d-flex justify-content-center">
-                  <legend class="col-md-12 fw-bold text-center mt-3">Login</legend>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-md-10 col 12">
-                    <label for="inputEmail4" class="form-label pt-2">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="exemplo@ex.com.br" required>
-                  </div>
-                  <div class="col-md-10 col-12">
-                    <label for="inputPassword4" class="form-label pt-2">Digite sua Senha</label>
-                    <input type="password" class="form-control" id="inputPassword4" required>
-                  </div>
-
-                  <div class="col-12 p-3 text-end ps-md-5 pe-md-5 d-flex justify-content-between">
-                    <a href="./telaCadastroLogin.html">
-                      <p>Registrar-se</p>
-                    </a>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                  </div>
-
-                </div>
-              </fieldset>
-            </form>
+  <hr class="m-0">
+  <!--Body-->
+  <main>
+    <!-- Seção de introdução -->
+    <section id="introducao" class="py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12">
+            <h2 class="display-4">Sobre a Pousada Quinta do Ypuã</h2>
+            <p class="lead">
+              Conheça um pouco mais sobre a nossa história, missão e valores.
+              Aqui, buscamos oferecer a melhor experiência para nossos hóspedes, com conforto, tranquilidade e
+              hospitalidade.
+            </p>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Formulário Login -->
-  <div class="form">
-    <form class="row g-3 w-50 m-auto my-5">
-      <fieldset class="border bg-light p3 d-grid m-auto rounded-3">
-        <div class="col-12 col-md-12 d-flex justify-content-center">
-          <legend class="col-md-12 fw-bold">Informações De Cadastro</legend>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-12">
-            <label for="Nome" class="form-label pt-2">Nome</label>
-            <input type="name" class="form-control" id="Nome" placeholder="Nome" required>
-          </div>
-          <div class="col-md-6 col-12">
-            <label for="Sobrenome" class="form-label pt-2">Sobrenome</label>
-            <input type="name" class="form-control" id="Sobrenome" placeholder="Sobrenome" required>
-          </div>
-          <div class="col-12 col-md-6">
-            <label for="Cpf" class="form-label pt-2">CPF</label>
-            <input type="number" class="form-control" id="cpf" placeholder="12345678910" required>
-          </div>
-          <div class="col-12 col-md-6">
-            <label for="Celular" class="form-label pt-2">Telefone</label>
-            <input type="number" class="form-control" id="Celular" placeholder="(00) 94002-8922" required>
-          </div>
-          <div class="col-md-12">
-            <label for="inputEmail4" class="form-label pt-2">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="exemplo@ex.com.br" required>
-          </div>
-          <div class="col-md-6 col-12">
-            <label for="inputPassword4" class="form-label pt-2">Digite sua Senha</label>
-            <input type="password" class="form-control" id="inputPassword4" required>
-          </div>
-          <div class="col-md-6 col-12">
-            <label for="inputConfirmPassword" class="form-label pt-2">Confirme sua Senha</label>
-            <input type="password" class="form-control" id="inputConfirmPassword" required>
-          </div>
+    </section>
+    <hr class="m-0">
 
-          <div class="col-12 py-2">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck" required>
-              <label class="form-check-label" for="gridCheck">
-                Receber notícias e informações no e-mail cadastrado
-              </label>
-            </div>
+    <!-- Seção de história -->
+    <section id="historia" class="bg-light">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-xl-4">
+            <h3 class="text-center text-lg-start">Nossa História</h3>
+            <p class="fs-5 justify-content-center">
+              "O Ypuã tem tudo a ver com a natureza, dá para sentir a energia do lugar. Eu me preocupo se você vai comer
+              bem, dormir bem e se vai se sentir em casa. Vou te mostrar onde encontrar os melhores frutos do mar, onde
+              curtir a melhor praia e as melhores ondas. Mas se você não quiser fazer nada eu também conheço o melhor
+              lugar."
+            </p>
+            <p>HEITOR, Anfitrião da pousada</p>
           </div>
-          <div class="col-12 p-3">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+          <div class="col-12 col-xl-4 d-flex justify-content-center align-items-center">
+            <img src="./imagens/SobreNos/sobre_2.png" class="img-fluid rounded" alt="Imagem da História da Pousada">
           </div>
         </div>
-      </fieldset>
-    </form>
-  </div>
+      </div>
+    </section>
 
-  </div>
+    <hr class="m-0">
+    <!-- Seção de missão e valores -->
+    <section id="missao-valores" class="py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12">
+            <h3>Nossa Missão e Valores</h3>
+            <p class="lead fs-4">Nós acreditamos que uma boa estadia começa com um atendimento de qualidade e um
+              ambiente acolhedor.</p>
+          </div>
+        </div>
+        <div class="row text-center text-lg-start">
+          <div class="col-md-4">
+            <h4 class="text-center">Missão</h4>
+            <p class="fs-5">
+              Nossa missão é proporcionar uma experiência única e relaxante, garantindo conforto, segurança e a melhor
+              experiência de lazer para todos os nossos hóspedes.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-center">Compromisso</h4>
+            <p class="fs-5">
+              Nos comprometemos a proporcionar aos nossos hóspedes momentos inesquecíveis, com um atendimento
+              personalizado e atencioso.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-center">Valores</h4>
+            <p class="fs-5">Nós valorizamos acima de tudo o Respeito, a Confiança, a Sustentabilidade e a Hospitalidade!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="m-0">
+    <!-- Seção de chamada à ação -->
+    <section id="chamada-acao" class="pt-5 text-center py-5 bg-black text-white">
+      <div class="container">
+        <h2>Viva a experiência da nossa pousada</h2>
+        <p class="fs-3">Venha relaxar e viver momentos inesquecíveis. Faça sua reserva agora!</p>
+        <a href="./telaAcomodacoes.html" class="btn btn-primary btn-lg">Faça sua Reserva</a>
+      </div>
+    </section>
+  </main>
   <hr class="m-0">
 
   <!-- Footer -->
-  <footer class="bg-light text-center text-lg-start mt-2">
+  <footer class="bg-light text-center text-lg-start py-4">
     <div class="container p-4">
       <div class="row justify-content-center">
 
@@ -211,7 +200,7 @@
             <li><a href="./telaSobre.html" class="text-dark text-decoration-none">Sobre nós</a></li>
             <li><a href="./telaAcomodacoes.html" class="text-dark text-decoration-none">Acomodações</a></li>
             <li><a href="#" class="text-dark text-decoration-none">Contatos</a></li>
-            <li><a href="./telaAcomodacoes.html" class="text-dark text-decoration-none">Faça sua Reserva</a></li>
+            <li><a href="./telaAcomodacoes.html" class="text-dark text-decoration-none">Faça sua Reserva</a>
           </ul>
         </div>
 
@@ -244,7 +233,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script src="./scripts/telaCadastro.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 
 </html>
