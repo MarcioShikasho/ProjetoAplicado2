@@ -69,17 +69,17 @@ export async function insert_hospede(id_pessoa, data_criacao_conta, ultimo_login
 }
 
 export async function select_hospede(id) {
-    const [rows] = await pool.query("SELECT * FROM hospede WHERE id = ?", [id]) 
+    const [rows] = await pool.query("SELECT * FROM hospede WHERE id = ?;", [id]) 
     return rows
 }
 
 export async function update_hospede(coluna, informacao, id) {
-    const [rows] = await pool.query("UPDATE hospede SET ? = ? WHERE id = ?", [coluna, informacao, id])
+    const [rows] = await pool.query("UPDATE hospede SET ? = ? WHERE id = ?;", [coluna, informacao, id])
     return rows
 }
 
 export async function delete_hospede(id) {
-    const [rows] = await pool.query("DELETE FROM hospede WHERE id - ?", [id])
+    const [rows] = await pool.query("DELETE FROM hospede WHERE id - ?;", [id])
     return rows
 }
 
@@ -88,5 +88,31 @@ export async function delete_hospede(id) {
 export async function insert_acomodacao(nome, capacidade, numero_camas, descricaco_comodidades, valor_diaria, disponibilidade) {
     // VALIDACAO AQUI
     const [rows] = await pool.query("INSERT INTO acomodacao(nome, capacidade, numero_camas, descricao_acomodidades, valor_diario, disponibilidade", [nome, capacidade, numero_camas, descricao_acomodidades, valor_diaria, disponibilidade])
+    return rows
+}
+
+export async function select_acomodacao(id) {
+    // VALIDACAO AQUI
+    const [rows] = await pool.query("SELECT * FROM acomodacao WHERE id = ?;", [id])
+    return rows
+}
+
+export async function update_acomodacao(coluna, informacao, id) {
+    // VALIDACAO AQUI
+    const [rows] = await pool.query("UPDATE acomodacao SET ? = ? WHERE id = ?;", [coluna, informacao, id])
+    return rows
+}
+
+export async function delete_acomodacao(id) {
+    const [rows] = await pool.query("DELETE FROM acomodacao WHERE id = ?;", [id])
+    return rows
+}
+
+
+//CRUD RESERVA
+
+export async function insert_reserva(id_hospede, id_acomodacao, id_funcionario, data_inicio, data_fim, valor, metodo_pgto, status_reserva, preferencias) {
+    // VALIDACAO AQUI
+    const [rows] = await pool.query("INSERT INTO reserva(export async function insert_reserva(id_hospede, id_acomodacao, id_funcionario, data_inicio, data_fim, valor, metodo_pgto, status_reserva, preferencias) VALUES(?, ?, ? ,? ,? ,? ,? ,? ,?);", [id_hospede, id_acomodacao, id_funcionario, data_inicio, data_fim, valor, metodo_pgto, status_reserva, preferencias])
     return rows
 }

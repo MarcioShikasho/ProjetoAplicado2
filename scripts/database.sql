@@ -237,4 +237,6 @@ ON reserva FOR EACH ROW
 VALUES 	("D", now(), OLD.id, OLD.id_hospede, OLD.id_acomodacao, OLD.id_funcionario, OLD.data_inicio, OLD.data_fim, OLD.valor, OLD.metodo_pgto, OLD.status_reserva, OLD.preferencias);
 
 
+
+
 -- FIM DO SCRIPT
