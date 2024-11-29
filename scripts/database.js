@@ -15,9 +15,14 @@ const pool = mysql.createPool({
 //CRUD PESSOA
 export async function insert_pessoa(nome, cpf, login, senha, data_nasc, telefone, email) {
     // VALIDACAO AQUI
+    try {
+
+    } catch(error) {
+        throw console.log(error)
+    }
     const [rows] = await pool.query('INSERT INTO pessoa(nome, cpf, login, senha, data_nasc, telefone, email VALUES(?, ?, ?, ?, ?, ?, ?);')
     [nome, cpf, login, senha, data_nasc, telefone, email]
-    return rows
+    return rows.insertId
 }
 
 export async function select_pessoa(id) {
@@ -42,7 +47,7 @@ export async function delete_pessoa(id) {
 export async function insert_funcionario(id_pessoa, cargo, salario, data_admissao) {
     //VALIDACAO AQUI \\ como vai funcionar na lógica o insert de funcionario e hospedes??
     const [rows] = await pool.query("INSERT INTO funcionario(id_pessoa, cargo, salario, data_admissao) VALUES (?, ?, ?, ?);", [id_pessoa, cargo, salario, data_admissao])    
-    return rows
+    return rows.insertId
 }
 
 export async function select_funcionario(id) {
@@ -50,13 +55,13 @@ export async function select_funcionario(id) {
     return rows
 }
 
-export async function update_pessoa(coluna, informacao, id) {
+export async function update_funcionario(coluna, informacao, id) {
     //VALIDACAO AQUI
     const [rows] = await pool.query("UPDATE funcionario SET ? = ? WHERE id - ?;", [coluna, informacao, id])
     return rows
 }
 
-export async function delete_pessoa(id) {
+export async function delete_funcionario(id) {
     const [rows] = await pool.query("DELETE FROM funcionario WHERE id = ?;")
     return rows
 }
@@ -64,8 +69,9 @@ export async function delete_pessoa(id) {
 //CRUD HOSPEDE
 export async function insert_hospede(id_pessoa, data_criacao_conta, ultimo_login) {
     //VALIDACAO AQUI || default pro ultimo login ao criar a conta é o data_criacao_conta
-    const [rows] = await pool.query("INSERT INTO hospede(id_pessoa, data_criacao_conta, ultimo_login) VALUES (")
-    return rows
+    const [rows] = await pool.query(
+        "INSERT INTO hospede(id_pessoa, data_criacao_conta, ultimo_login) VALUES (?, ?, ?);")
+    return rows.insertId
 }
 
 export async function select_hospede(id) {
@@ -88,7 +94,7 @@ export async function delete_hospede(id) {
 export async function insert_acomodacao(nome, capacidade, numero_camas, descricaco_comodidades, valor_diaria, disponibilidade) {
     // VALIDACAO AQUI
     const [rows] = await pool.query("INSERT INTO acomodacao(nome, capacidade, numero_camas, descricao_acomodidades, valor_diario, disponibilidade", [nome, capacidade, numero_camas, descricao_acomodidades, valor_diaria, disponibilidade])
-    return rows
+    return rows.insertId
 }
 
 export async function select_acomodacao(id) {
@@ -114,5 +120,26 @@ export async function delete_acomodacao(id) {
 export async function insert_reserva(id_hospede, id_acomodacao, id_funcionario, data_inicio, data_fim, valor, metodo_pgto, status_reserva, preferencias) {
     // VALIDACAO AQUI
     const [rows] = await pool.query("INSERT INTO reserva(export async function insert_reserva(id_hospede, id_acomodacao, id_funcionario, data_inicio, data_fim, valor, metodo_pgto, status_reserva, preferencias) VALUES(?, ?, ? ,? ,? ,? ,? ,? ,?);", [id_hospede, id_acomodacao, id_funcionario, data_inicio, data_fim, valor, metodo_pgto, status_reserva, preferencias])
+    return rows.insertId
+}
+
+export async function select_reserva(id) {
+    //VALIDACAO AQUI
+    const [rows] = await pool.query("SELECT * FROM reserva WHERE id = ?;", [id])
     return rows
 }
+
+export async function update_reserva(coluna, informacao, id) {
+    //VALIDACAO AQUI
+    const [rows] = await pool.query("UPDATE reserva SET ? = ? WHERE id = ?;", [coluna, informacao, id])
+    return rows
+}
+
+
+const [result] = await select_pessoa('1')
+console.log(result)
+console.log(result.nome)
+const [result1] = await update_pessoa('nome', 'nomePessoa', 1)
+console.log(result1)
+const [result2] = await select_pessoa('1')
+console.log(result2)
