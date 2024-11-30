@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     const inputs = document.querySelectorAll('input');
     const editButton = document.getElementById('editButton');
+    const login =  localStorage.getItem('userId');
+
+
     
     // Quando clicar no botão 'Editar'vai habilitar os campos e trocar o botão para salvar
     editButton.addEventListener('click', function () {

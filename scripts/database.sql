@@ -5,7 +5,6 @@ CREATE TABLE IF NOT EXISTS pessoa(
 	id INT AUTO_INCREMENT NOT NULL,
     nome VARCHAR(255) NOT NULL,
     cpf VARCHAR(11) NOT NULL,
-    login VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL,
     data_nasc DATE NOT NULL,
     telefone VARCHAR(15) NOT NULL,
@@ -90,7 +89,6 @@ CREATE TABLE IF NOT EXISTS auditoria_pessoa (
     id INT NOT NULL,
     nome VARCHAR(255) NOT NULL, 
     cpf VARCHAR(11) NOT NULL,
-    login varchar(255) NOT NULL,
     senha VARCHAR(255) NOT NULL,
     data_nasc VARCHAR(100) NOT NULL,
     telefone VARCHAR(15) NOT NULL,
@@ -100,19 +98,19 @@ CREATE TABLE IF NOT EXISTS auditoria_pessoa (
 
 CREATE TRIGGER insert_pessoa AFTER INSERT
 ON pessoa FOR EACH ROW
-	INSERT INTO auditoria_pessoa(operacao, data_operacao, id, nome, cpf, login, senha, data_nasc, telefone, email)
-VALUES ("I", now(), NEW.id, NEW.nome, NEW.cpf, NEW.login, NEW.senha, NEW.data_nasc, NEW.telefone, NEW.email);
+	INSERT INTO auditoria_pessoa(operacao, data_operacao, id, nome, cpf, senha, data_nasc, telefone, email)
+VALUES ("I", now(), NEW.id, NEW.nome, NEW.cpf, NEW.senha, NEW.data_nasc, NEW.telefone, NEW.email);
 
 CREATE TRIGGER update_pessoa AFTER UPDATE
 ON pessoa FOR EACH ROW
-	INSERT INTO auditoria_pessoa(operacao, data_operacao, id, nome, cpf, login, senha, data_nasc, telefone, email)
-VALUES 	("UA", now(), OLD.id, OLD.nome, OLD.cpf, OLD.login, OLD.senha, OLD.data_nasc, OLD.telefone, OLD.email),
-		("UZ", now(), NEW.id, NEW.nome, NEW.cpf, NEW.login, NEW.senha, NEW.data_nasc, NEW.telefone, NEW.email);
+	INSERT INTO auditoria_pessoa(operacao, data_operacao, id, nome, cpf, senha, data_nasc, telefone, email)
+VALUES 	("UA", now(), OLD.id, OLD.nome, OLD.cpf, OLD.senha, OLD.data_nasc, OLD.telefone, OLD.email),
+		("UZ", now(), NEW.id, NEW.nome, NEW.cpf, NEW.senha, NEW.data_nasc, NEW.telefone, NEW.email);
 
 CREATE TRIGGER delete_pessoa AFTER DELETE
 ON pessoa FOR EACH ROW
-	INSERT INTO auditoria_pessoa(operacao, data_operacao, id, nome, cpf, login, senha, data_nasc, telefone, email)
-VALUES 	("D", now(), OLD.id, OLD.nome, OLD.cpf, OLD.login, OLD.senha, OLD.data_nasc, OLD.telefone, OLD.email);
+	INSERT INTO auditoria_pessoa(operacao, data_operacao, id, nome, cpf, senha, data_nasc, telefone, email)
+VALUES 	("D", now(), OLD.id, OLD.nome, OLD.cpf, OLD.senha, OLD.data_nasc, OLD.telefone, OLD.email);
 
 
 CREATE TABLE IF NOT EXISTS auditoria_funcionario (
@@ -240,3 +238,9 @@ VALUES 	("D", now(), OLD.id, OLD.id_hospede, OLD.id_acomodacao, OLD.id_funcionar
 
 
 -- FIM DO SCRIPT
+
+
+INSERT INTO pessoa(nome, cpf, senha, data_nasc, telefone, email) VALUES ("Fun1", "56498562956", "best_senha", "2004-10-01", 556986478956235, "lady_gagaDabest");
+INSERT INTO funcionario (id_pessoa, cargo, salario, data_admissao) VALUES (1, "Faxineiro", 2764.64, "2023-05-25");
+INSERT INTO pessoa(nome, cpf, senha, data_nasc, telefone, email) VALUES ("João Honorato", "45698712354", "1978-01-01", "senhaSupr@sum0", 4579865982, "contact@gmail.com");
+INSERT INTO hospede(id_pessoa, data_criacao_conta, ultimo_login) VALUES(2, NOW(), NOW());
