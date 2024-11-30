@@ -1,6 +1,5 @@
-// Evento de cadastro - quando o formulário de cadastro for submetido
 document.getElementById('formCadastro').addEventListener('submit', function(e) {
-    e.preventDefault(); // Impede o comportamento padrão de envio do formulário
+    e.preventDefault(); 
 
     // Coleta os dados do formulário
     const nome = document.getElementById('Nome').value;
@@ -18,7 +17,7 @@ document.getElementById('formCadastro').addEventListener('submit', function(e) {
         cpf: cpf,
         celular: celular,
         email: email,
-        senha: senha // Em um ambiente real, a senha nunca deve ser armazenada em texto simples
+        senha: senha
     };
 
     // Salva os dados no localStorage
@@ -26,5 +25,5 @@ document.getElementById('formCadastro').addEventListener('submit', function(e) {
 
     // Confirmação e redirecionamento após cadastro bem-sucedido
     alert("Cadastro realizado com sucesso!");
-    window.location.href = "./telaAcomodacoes.html"; // Redireciona para a página de login
+    window.location.href = "./telaAcomodacoes.html"; 
 });
