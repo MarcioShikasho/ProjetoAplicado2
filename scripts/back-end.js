@@ -44,8 +44,12 @@ export async function validarLogin(login, senha) {
     }
 }
 
+
+
 export async function insertHospedePessoa(pessoaData, hospedeData) {
     const connection = await pool.getConnection();
+
+
     try{
         await connection.beginTransaction();
 
@@ -55,7 +59,7 @@ export async function insertHospedePessoa(pessoaData, hospedeData) {
         );
 
         const pessoaId = pessoaResult.insertId;
-        await connection.query(
+        await connection.query( 
             'INSERT INTO hospede(id_pessoa, data_criacao_conta, ultimo_login) VALUES (?, CURDATE(), CURDATE());',
             [pessoaResult.insertId]
             
@@ -73,23 +77,23 @@ export async function insertHospedePessoa(pessoaData, hospedeData) {
 }
  
 
-// export async function select_hospede(id) {
-//     const connection = await pool.getConnection();
-//     try {
-//         await connection.beginTransaction();
-//         const [selectResult] = await connection.query(
-//             'SELECT * FROM pessoa WHERE id = ?;', id
-//         );
-//         if (selectResult.length === 0) {
-//             return null;
-//         }
+export async function select_hospede(id) {
+    const connection = await pool.getConnection();
+    try {
+        await connection.beginTransaction();
+        const [selectResult] = await connection.query(
+            'SELECT * FROM pessoa WHERE id = ?;', id
+        );
+        if (selectResult.length === 0) {
+            return null;
+        }
 
-//         return selectResult;
-//     } catch (error) {
-//         console.error("Erro ao buscar dados", error);
-//         throw err
-//     }
-// }
+        return selectResult;
+    } catch (error) {
+        console.error("Erro ao buscar dados", error);
+        throw error;
+    }
+}
 
 
 // export async function insertFuncionarioPessoa(pessoaData, funcionarioData) {
